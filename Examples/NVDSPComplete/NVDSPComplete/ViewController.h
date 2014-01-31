@@ -69,6 +69,7 @@
 @property BOOL lsf_on;
 @property BOOL nf_on;
 @property BOOL peqf_on;
+@property BOOL ps_on;
 
 @property float bpf_centerFrequency;
 @property float bpf_Q;
@@ -89,6 +90,7 @@
 @property float peqf_centerFrequency;
 @property float peqf_Q;
 @property float peqf_G;
+@property float ps_semitones;
 
 @property (retain, nonatomic) IBOutlet UILabel *bpf_cfLabel;
 @property (retain, nonatomic) IBOutlet UILabel *bpf_qLabel;
@@ -109,6 +111,7 @@
 @property (retain, nonatomic) IBOutlet UILabel *peqf_cfLabel;
 @property (retain, nonatomic) IBOutlet UILabel *peqf_qLabel;
 @property (retain, nonatomic) IBOutlet UILabel *peqf_gLabel;
+@property (retain, nonatomic) IBOutlet UILabel *ps_stLabel;
 
 - (IBAction)bpf_switchChanged:(id)sender;
 - (IBAction)bpf_cfChanged:(id)sender;
@@ -144,5 +147,8 @@
 - (IBAction)peqf_cfChanged:(id)sender;
 - (IBAction)peqf_qChanged:(id)sender;
 - (IBAction)peqf_gChanged:(id)sender;
+
+- (IBAction)ps_switchChanged:(id)sender;
+- (IBAction)ps_stChanged:(id)sender;
 
 @end

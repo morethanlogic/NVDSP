@@ -15,6 +15,7 @@
 		64365CCD189BF76600B23D5D /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64365CCA189BF76600B23D5D /* MainStoryboard_iPhone.storyboard */; };
 		64365CCF189BF78000B23D5D /* TLC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 64365CCE189BF78000B23D5D /* TLC.mp3 */; };
 		64498210189C219900E6AB7D /* Patron.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6449820F189C219900E6AB7D /* Patron.mp3 */; };
+		64498213189C3C1D00E6AB7D /* smbPitchShifter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 64498212189C3C1D00E6AB7D /* smbPitchShifter.mm */; };
 		807E5FE2172980CC00EF9F48 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807E5FE1172980CC00EF9F48 /* UIKit.framework */; };
 		807E5FE4172980CC00EF9F48 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807E5FE3172980CC00EF9F48 /* Foundation.framework */; };
 		807E5FE6172980CC00EF9F48 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807E5FE5172980CC00EF9F48 /* CoreGraphics.framework */; };
@@ -50,6 +51,8 @@
 		64365CCB189BF76600B23D5D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = NVDSPComplete/en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = SOURCE_ROOT; };
 		64365CCE189BF78000B23D5D /* TLC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = TLC.mp3; path = NVDSPComplete/TLC.mp3; sourceTree = SOURCE_ROOT; };
 		6449820F189C219900E6AB7D /* Patron.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Patron.mp3; path = NVDSPComplete/Patron.mp3; sourceTree = SOURCE_ROOT; };
+		64498211189C3C1D00E6AB7D /* smbPitchShifter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = smbPitchShifter.h; path = NVDSPComplete/smbPitchShifter.h; sourceTree = SOURCE_ROOT; };
+		64498212189C3C1D00E6AB7D /* smbPitchShifter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = smbPitchShifter.mm; path = NVDSPComplete/smbPitchShifter.mm; sourceTree = SOURCE_ROOT; };
 		807E5FDE172980CC00EF9F48 /* NVDSPComplete.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NVDSPComplete.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		807E5FE1172980CC00EF9F48 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		807E5FE3172980CC00EF9F48 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -149,6 +152,8 @@
 				64365CC3189BF74000B23D5D /* AppDelegate.mm */,
 				64365CC8189BF76600B23D5D /* MainStoryboard_iPad.storyboard */,
 				64365CCA189BF76600B23D5D /* MainStoryboard_iPhone.storyboard */,
+				64498211189C3C1D00E6AB7D /* smbPitchShifter.h */,
+				64498212189C3C1D00E6AB7D /* smbPitchShifter.mm */,
 				64365CBF189BF73700B23D5D /* ViewController.h */,
 				64365CC0189BF73700B23D5D /* ViewController.mm */,
 				807E5FE8172980CC00EF9F48 /* Supporting Files */,
@@ -312,6 +317,7 @@
 				807E6041172AC22500EF9F48 /* NVBandpassFilter.m in Sources */,
 				807E6042172AC22500EF9F48 /* NVBandpassQPeakGainFilter.m in Sources */,
 				807E6043172AC22500EF9F48 /* NVHighpassFilter.m in Sources */,
+				64498213189C3C1D00E6AB7D /* smbPitchShifter.mm in Sources */,
 				807E6044172AC22500EF9F48 /* NVHighShelvingFilter.m in Sources */,
 				807E6045172AC22500EF9F48 /* NVLowpassFilter.m in Sources */,
 				64365CC4189BF74000B23D5D /* AppDelegate.mm in Sources */,

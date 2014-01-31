@@ -28,6 +28,8 @@
 
 #import "ViewController.h"
 
+#import "smbPitchShifter.h"
+
 @interface ViewController ()
 
 @end
@@ -65,6 +67,7 @@
     _lsf_on = NO;
     _nf_on = NO;
     _peqf_on = NO;
+    _ps_on = NO;
     
     _bpf_centerFrequency = 2000.0f;
     _bpqf_centerFrequency = 2000.0f;
@@ -86,6 +89,8 @@
     _nf_Q = 0.5f;
     _peqf_Q = 0.5f;
     _peqf_G = 0.5f;
+    
+    _ps_semitones = 0.0f;
         
     [self playSound];
     
@@ -149,6 +154,11 @@
                  peqf.Q = _peqf_Q;
                  peqf.G = _peqf_G;
                  [peqf filterData:data numFrames:numFrames numChannels:numChannels];
+             }
+             
+             if (_ps_on) {
+                 float pitchShift = pow(2.0, _ps_semitones / 12.0);
+                 smbPitchShifter::smbPitchShift(pitchShift, (long)numFrames, 512, 4, samplingRate, data, data);
              }
          }
      }];
@@ -322,6 +332,17 @@
     [_peqf_gLabel setText:[NSString stringWithFormat:@"%.2f", _peqf_G]];
 }
 
+- (IBAction)ps_switchChanged:(id)sender
+{
+    _ps_on = [((UISwitch *)sender) isOn];
+}
+
+- (IBAction)ps_stChanged:(id)sender
+{
+    _ps_semitones = [(UISlider *)sender value];
+    [_ps_stLabel setText:[NSString stringWithFormat:@"%.2f", _ps_semitones]];
+}
+
 - (void)dealloc
 {
     [_bpf_cfLabel release];
@@ -344,6 +365,7 @@
     [_peqf_qLabel release];
     [_peqf_gLabel release];
     
+    [_ps_stLabel release];
     [super dealloc];
 }
 
